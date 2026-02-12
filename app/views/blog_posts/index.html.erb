@@ -1,0 +1,10 @@
+<h1>
+  New beginnings
+</h1>
+<%= link_to "New blog", new_blog_post_path %>
+<ul>
+  <% @posts.each do |p|%>
+    <h2><%= link_to p.title, p %> </h2>
+    <p> <%= truncate(p.body, length: 15) %> </p>
+  <% end %>
+</ul>

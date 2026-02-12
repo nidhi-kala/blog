@@ -1,0 +1,6 @@
+<h1> <%= @post.title %> </h1>
+<p>
+  <%= @post.body %>
+</p>
+<%= link_to "All blogs", blog_posts_path %>
+<%= link_to "Edit", edit_blog_post_path(@post) %>

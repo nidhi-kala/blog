@@ -1,0 +1,18 @@
+<%= form_with model: @post, class: "space-y-4 m-4" do |f| %>
+  <% if f.object.errors.any? %>
+    <div>
+      <% f.object.errors.full_messages.each do |e|%>
+        <div> <%= e %></div>
+      <% end %>
+    </div>
+  <%end %>
+  <div class="">
+    <%= f.label :title %>
+    <%= f.text_field  :title, class: "border rounded px-2 py-1" %>
+  </div>
+  <div class= "">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: "border rounded px-2 py-1" %>
+  </div>
+  <%= f.submit class: "border rounded-full p-3" %>
+<% end %>
