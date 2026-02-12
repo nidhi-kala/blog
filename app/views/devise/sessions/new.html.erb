@@ -6,7 +6,7 @@
   </div>
   <div class="field">
     <p><%= f.label :password %></p>
-    <p><%= f.password_field :password, autocomplete: "current-password" %></p>
+    <p class="bg-blue-200 p-1 border-2"><%= f.password_field :password, autocomplete: "current-password" %></p>
   </div>
   <% if devise_mapping.rememberable? %>
     <div class="field">
